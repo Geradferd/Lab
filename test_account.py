@@ -30,6 +30,15 @@ testy.test_withdraw()
 " Now Using PyTest "
 
 def test_start():
+    """
+    makes sure that a TypeError will happen when you have 0 or more
+    than 2 arguments
+
+    Returns
+    -------
+    None.
+
+    """
     try:
         account.Account()
         assert False
@@ -43,6 +52,15 @@ def test_start():
         assert True
 
 def test_dep():
+    """
+    Checks for if a number can be added to the balance,
+    if False is returned when entering 0 or less
+
+    Returns
+    -------
+    None.
+
+    """
     assert account.Account("Nick").deposit(5) == True
     jam = account.Account("Jammy")
     jam.deposit(5)
@@ -50,6 +68,15 @@ def test_dep():
     assert jam.deposit(-1) == False
 
 def test_with():
+    """
+    Checks if false will be returned when you try and withraw 0, a negative
+    number or more than what your balance is
+
+    Returns
+    -------
+    None.
+
+    """
     jam = account.Account("James")
     jam.deposit(10)
     jam.withdraw(1)
