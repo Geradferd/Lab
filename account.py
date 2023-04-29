@@ -1,20 +1,6 @@
 class Account:
     
-<<<<<<< Updated upstream
-    def __init__(self, name):
-        self.__account_name = name
-        self.__account_balance = 0
-    
-    def deposit(self, amount):
-=======
-    """
-    This class allows you to keep track of the amount
-    of money in your account.
-    
-    :param __account_name: the users name
-    :param __account_name: the users account balance
-    """
-    
+
     def __init__(self, name: str):
         """
         Constructor to create initialstate of a account
@@ -36,15 +22,13 @@ class Account:
         -------
 
         """
->>>>>>> Stashed changes
+
         if amount > 0:
             self.__account_balance += amount
             return True
         return False
     
-<<<<<<< Updated upstream
-    def withdraw(self, amount):
-=======
+
     def withdraw(self, amount: int) -> bool:
         """
         removes a given amount of money from the
@@ -61,18 +45,13 @@ class Account:
             and you are removing less than the current balance
 
         """
->>>>>>> Stashed changes
+
         if 0 < amount <= self.__account_balance:
             self.__account_balance -= amount
             return True
         return False
     
-<<<<<<< Updated upstream
-    def get_balance(self):
-        return self.__account_balance
-    
-    def get_name(self):
-=======
+
     def get_balance(self) -> int:
         """
         Method to get the person's current balance
@@ -85,7 +64,7 @@ class Account:
         Method to get the user's name
         :return: Person's name
         """
->>>>>>> Stashed changes
+
         return self.__account_name
     
       
